@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Timeline Line Above Node -->
+    <View
+        android:id="@+id/viewTimelineTop"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imageTimelineNode"
+        app:layout_constraintStart_toStartOf="@id/imageTimelineNode"
+        app:layout_constraintEnd_toEndOf="@id/imageTimelineNode"
+        android:layout_marginBottom="2dp"/>
+
+    <!-- Timeline Node (Circle) -->
+    <ImageView
+        android:id="@+id/imageTimelineNode"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/timeline_node_circle"
+        app:layout_constraintTop_toTopOf="@id/textViewTimelineDate"
+        app:layout_constraintBottom_toBottomOf="@id/textViewTimelineDate"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Timeline Line Below Node -->
+    <View
+        android:id="@+id/viewTimelineBottom"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@id/imageTimelineNode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/imageTimelineNode"
+        app:layout_constraintEnd_toEndOf="@id/imageTimelineNode"
+        android:layout_marginTop="2dp"/>
+
+    <!-- Date Text -->
+    <TextView
+        android:id="@+id/textViewTimelineDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageTimelineNode"
+        tools:text="May 25"/>
+
+    <!-- Note Snippet Text -->
+    <TextView
+        android:id="@+id/textViewTimelineNote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="?android:textColorSecondary"
+        android:lineSpacingMultiplier="1.1"
+        android:maxLines="4"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/textViewTimelineDate"
+        app:layout_constraintStart_toStartOf="@id/textViewTimelineDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="8dp"
+        tools:text="Meeting with Lukasz was great! His idea always uplifts me and helps my with me with."/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

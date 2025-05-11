@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <!-- Add IDs and Icons for your items -->
+        <item
+            android:id="@+id/nav_checkin"
+            android:icon="@drawable/profile_user"
+        android:title="Check-in" />
+        <item
+            android:id="@+id/nav_journal"
+            android:icon="@drawable/journal"
+        android:title="Journal" />
+        <item
+            android:id="@+id/nav_membership"
+            android:icon="@drawable/membership"
+        android:title="Membership" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/notification"
+        android:title="Notifications" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/high_five"
+        android:title="Friends" />
+        <!-- Add other items like Settings, Logout later if needed -->
+    </group>
+    <item android:title="Account"> <!-- Optional group title -->
+        <menu>
+            <!-- *** ADD LOGOUT ITEM HERE *** -->
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+            android:title="Logout" />
+            <!-- Set android:checkable="false" if you don't want it highlighted -->
+        </menu>
+    </item>
+</menu>

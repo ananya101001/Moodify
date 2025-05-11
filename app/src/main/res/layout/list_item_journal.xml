@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:strokeColor="@color/card_stroke_color"
+    app:strokeWidth="0.5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Timeline indicator -->
+        <View
+            android:id="@+id/timelineIndicator"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="?attr/colorPrimary"
+            android:visibility="visible"/>
+
+        <!-- Mood emoji with colored background -->
+        <LinearLayout
+            android:id="@+id/moodEmojiContainer"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/textViewJournalMoodIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <!-- Content area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <!-- Date and time -->
+            <TextView
+                android:id="@+id/textViewJournalDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                android:textColor="?android:textColorSecondary"
+                tools:text="Oct 27, 2024 • 03:45 PM"/>
+
+            <!-- Mood text -->
+            <TextView
+                android:id="@+id/textViewJournalMood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:textColor="?android:textColorPrimary"
+                tools:text="Happy"/>
+
+            <!-- Note snippet -->
+            <TextView
+                android:id="@+id/textViewJournalNoteSnippet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                android:textColor="?android:textColorPrimary"
+                tools:text="This is the beginning of the journal note, it might be quite long so we need to truncate it..."/>
+        </LinearLayout>
+
+        <!-- Bottom border -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="72dp"
+            android:layout_alignParentBottom="true"
+            android:background="?android:attr/listDivider"/>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

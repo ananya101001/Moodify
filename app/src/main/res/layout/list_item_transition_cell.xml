@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cellContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="48dp"
+    android:minHeight="48dp"
+    android:layout_margin="1dp"
+    tools:background="#E0E0E0"> <!-- Placeholder background -->
+
+    <TextView
+        android:id="@+id/textViewTransitionCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="?android:textColorPrimary"
+        android:textStyle="bold"
+        tools:text="5" />
+
+</FrameLayout>

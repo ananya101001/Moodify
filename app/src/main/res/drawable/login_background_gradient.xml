@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Define the solid background color -->
+    <!-- Using "?attr/colorPrimary" makes the button use the primary color defined in your theme -->
+    <solid android:color="?attr/colorPrimary" />
+
+    <!-- Define the rounded corners -->
+    <!-- Adjust the radius value to make it more or less round -->
+    <corners android:radius="24dp" />
+
+</shape>

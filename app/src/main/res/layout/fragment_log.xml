@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".LogFragment">
+
+    <!-- "How are you?" Title -->
+    <TextView
+        android:id="@+id/textViewLogTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="How are you feeling today?"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Container for Mood Selection (Horizontal LinearLayout) -->
+    <LinearLayout
+        android:id="@+id/moodSelectionContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/textViewLogTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Mood Option 1: Happy -->
+        <LinearLayout style="@style/MoodSelectionItemLayout">
+            <ImageView
+                android:id="@+id/imageMoodHappy"
+            style="@style/MoodSelectionIcon"
+            android:src="@drawable/happiness"
+            android:contentDescription="Happy" />
+            <TextView
+                style="@style/MoodSelectionLabel"
+                android:textColor="@color/chart_happy"
+            android:text="Happy" />
+        </LinearLayout>
+
+        <!-- Mood Option 2: Good -->
+        <LinearLayout style="@style/MoodSelectionItemLayout">
+            <ImageView
+                android:id="@+id/imageMoodGood"
+            style="@style/MoodSelectionIcon"
+            android:src="@drawable/smiling"
+            android:contentDescription="Good" />
+            <TextView
+                style="@style/MoodSelectionLabel"
+                android:textColor="@color/mood_good_color"
+            android:text="Good" />
+        </LinearLayout>
+
+        <!-- Mood Option 3: Okay -->
+        <LinearLayout style="@style/MoodSelectionItemLayout">
+            <ImageView
+                android:id="@+id/imageMoodOkay"
+            style="@style/MoodSelectionIcon"
+            android:src="@drawable/neutral"
+            android:contentDescription="Okay" />
+            <TextView
+                style="@style/MoodSelectionLabel"
+                android:textColor="@color/mood_okay_color"
+            android:text="Okay" />
+        </LinearLayout>
+
+        <!-- Mood Option 4: Sad -->
+        <LinearLayout style="@style/MoodSelectionItemLayout">
+            <ImageView
+                android:id="@+id/imageMoodSad"
+            style="@style/MoodSelectionIcon"
+            android:src="@drawable/sad"
+            android:contentDescription="Sad" />
+            <TextView
+                style="@style/MoodSelectionLabel"
+                android:textColor="@color/chart_sad"
+            android:text="Sad" />
+        </LinearLayout>
+
+        <!-- Mood Option 5: Anxious -->
+        <LinearLayout style="@style/MoodSelectionItemLayout">
+            <ImageView
+                android:id="@+id/imageMoodAnxious"
+            style="@style/MoodSelectionIcon"
+            android:src="@drawable/anxious"
+            android:contentDescription="Anxious" />
+            <TextView
+                style="@style/MoodSelectionLabel"
+                android:textColor="@color/chart_anxious"
+            android:text="Anxious" />
+        </LinearLayout>
+
+        <!-- REMOVED Terrible/Bad/Excellent/Content - Add back if needed -->
+
+    </LinearLayout> <!-- End of Mood Selection Container -->
+
+    <!-- Divider (Optional) -->
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/moodSelectionContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- "What activity..." Title -->
+    <TextView
+        android:id="@+id/textViewActivityTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="What activity accompanied this feeling?"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/divider1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Activity Selection Chips -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupActivities"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:chipSpacingHorizontal="8dp"
+        app:chipSpacingVertical="4dp"
+        app:selectionRequired="false"
+        app:singleSelection="false"
+        app:layout_constraintTop_toBottomOf="@id/textViewActivityTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Add your Activity Chips here -->
+        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:id="@+id/chipWork" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Work"/>
+        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:id="@+id/chipExercise" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Exercise"/>
+        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:id="@+id/chipFriends" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Friends"/>
+        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:id="@+id/chipFamily" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Family"/>
+        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:id="@+id/chipReading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reading"/>
+        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:id="@+id/chipRelax" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Relaxing"/>
+        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:id="@+id/chipEating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Eating"/>
+        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:id="@+id/chipSleeping" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sleeping"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Journal Entry EditText -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldJournal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="Add a journal entry... (Optional)"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroupActivities"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSaveMood"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextJournal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|start"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minHeight="80dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/buttonSaveMood"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save Mood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

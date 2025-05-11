@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- Timeline Line Above Node -->
+        <View
+            android:id="@+id/viewTimelineTop"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/viewMoodIndicatorNode"
+            app:layout_constraintStart_toStartOf="@id/viewMoodIndicatorNode"
+            app:layout_constraintEnd_toEndOf="@id/viewMoodIndicatorNode"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Timeline Node (Circle Indicator) -->
+        <View
+            android:id="@+id/viewMoodIndicatorNode"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/timeline_node_circle_filled"
+            app:layout_constraintTop_toTopOf="@id/textViewCardMood"
+            app:layout_constraintBottom_toBottomOf="@id/textViewCardMood"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Timeline Line Below Node -->
+        <View
+            android:id="@+id/viewTimelineBottom"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/viewMoodIndicatorNode"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/viewMoodIndicatorNode"
+            app:layout_constraintEnd_toEndOf="@id/viewMoodIndicatorNode"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Mood Text -->
+        <TextView
+            android:id="@+id/textViewCardMood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/viewMoodIndicatorNode"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Happy"/>
+
+        <!-- Date and Time Text -->
+        <TextView
+            android:id="@+id/textViewCardTimestamp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="?android:textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@id/textViewCardMood"
+            app:layout_constraintStart_toStartOf="@id/textViewCardMood"
+            app:layout_constraintEnd_toEndOf="@id/textViewCardMood"
+            tools:text="Apr 24, 2025 - 10:30 AM"/>
+
+        <!-- Note Snippet -->
+        <TextView
+            android:id="@+id/textViewCardNoteSnippet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:lineSpacingMultiplier="1.1"
+            android:textColor="?android:textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCardTimestamp"
+            app:layout_constraintStart_toStartOf="@id/textViewCardMood"
+            app:layout_constraintEnd_toEndOf="@id/textViewCardMood"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="This is the journal note snippet. It displays the beginning of the text entered by the user for this specific mood entry..."/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

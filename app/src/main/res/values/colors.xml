@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Existing colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="chart_happy">#4CAF50</color>   <!-- Green -->
+    <color name="chart_content">#8BC34A</color>  <!-- Light Green -->
+    <color name="chart_neutral">#FFC107</color>  <!-- Amber/Yellow -->
+    <color name="chart_anxious">#FF9800</color>  <!-- Orange -->
+    <color name="chart_sad">#2196F3</color>     <!-- Blue -->
+    <color name="chart_angry">#F44336</color>   <!-- Red -->
+    <color name="chart_default">#9E9E9E</color>
+
+    <!-- ADD THESE REQUIRED COLORS (from the theme example) -->
+    <color name="primary_calm_blue">#6497b1</color>   <!-- A soft blue -->
+    <color name="primary_dark_calm_blue">#03396c</color> <!-- A darker variant -->
+    <color name="accent_teal">#01a7c2</color>       <!-- An accent color -->
+    <color name="background_light_cream">#f4f1de</color> <!-- A warm off-white -->
+    <color name="text_dark_grey">#333333</color>      <!-- Dark text for readability -->
+    <color name="text_medium_grey">#666666</color>     <!-- Medium text -->
+    <color name="divider_light_grey">#DDDDDD</color>   <!-- For subtle lines -->
+    <color name="edittext_stroke">#BDBDBD</color>    <!-- Border for input fields -->
+    <color name="mood_accent">#1A0C24</color> <!-- Soft Green (or any color you prefer) -->
+    <color name="mood_text_secondary">#283618</color>
+    <color name="mood_accent_light">#e76f51</color>
+
+    <color name="mood_terrible_color">#E53935</color> <!-- Example Red -->
+    <color name="mood_bad_color">#FF9800</color>    <!-- Example Orange -->
+    <color name="mood_okay_color">#2196F3</color>    <!-- Example Blue -->
+    <color name="mood_good_color">#8BC34A</color>   <!-- Example Light Green -->
+    <color name="mood_excellent_color">#4CAF50</color> <!-- Example Green -->
+
+    <!-- ... other colors ... -->
+    <color name="mood_color_happy">#4CAF50</color>   <!-- Green -->
+    <color name="mood_color_good">#8BC34A</color>   <!-- Light Green -->
+    <color name="mood_color_okay">#FFC107</color>  <!-- Amber/Yellow -->
+    <color name="mood_color_sad">#2196F3</color>     <!-- Blue -->
+    <color name="mood_color_anxious">#FF9800</color>  <!-- Orange -->
+    <color name="mood_color_terrible">#E53935</color>
+
+    <color name="card_stroke_color">#1E000000</color>
+
+</resources>
